@@ -75,7 +75,7 @@
                       <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                       <span class="tombol-cart">&nbsp;Keranjang&nbsp;
                       </span><span class="badge badge-danger cart-num">
-                      @if(!Auth::user()->cart->first())
+                      @if(Auth::user()->cart->first() == null)
                         0
                       @elseif (Auth::user()->cart->where('status', 1)->first())
                         {{Auth::user()->cart->cartItems->count()}}

@@ -27,20 +27,6 @@
           </div>
           <div class="col-lg-5 col-md-12 col-sm-12 produk-img">
             <img src="{{$produk->gambar_produk}}" alt="{{$produk->nama_produk}}">
-            {{-- <div class="card-group">
-              <div class="card">
-                <img src="{{asset('img/nasi.jpg')}}" alt="nasi jpg">
-              </div>
-              <div class="card">
-                <img src="{{asset('img/nasi.jpg')}}" alt="nasi jpg">
-              </div>
-              <div class="card">
-                <img src="{{asset('img/nasi.jpg')}}" alt="nasi jpg">
-              </div>
-              <div class="card">
-                <img src="{{asset('img/nasi.jpg')}}" alt="nasi jpg">
-              </div>
-            </div> --}}
           </div>
           <div class="col-lg-7 col-md-12 col-sm-12 produk-detail">
             <div class="card-header">
@@ -91,7 +77,11 @@
               <br>
               <div class="card">
                 <div class="card-body">
+                  @if (!Auth::user())
+                    <a href="/login1st" class="btn btn-block btn-warning"><i class="fa fa-cart-plus fa-fw"></i> &nbsp; Sebelum Melakukan Order, Silahkan Login Terlebih dahulu</a>
+                  @else
                   <button type="submit" name="submit" class="btn btn-block"><i class="fa fa-cart-plus fa-fw"></i> &nbsp; Tambah ke Keranjang</button>
+                  @endif
                 </div>
               </div>
             </form>
@@ -99,9 +89,12 @@
 
           <div class="col-md-12 produk-deskripsi">
             <br>
+            <div class="card-header">
+              <span>Deskripsi Produk</span>
+            </div>
             <div class="card">
               <div class="card-body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident nemo quas nobis voluptatem ad enim, repudiandae, ipsa magnam culpa error illo? Vero ducimus consequuntur asperiores quae, beatae repellendus tempore enim?</p>
+                <p>{{$produk->deskripsi_produk}}</p>
               </div>
             </div>
           </div>

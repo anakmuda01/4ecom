@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Auth;
 use App\Models\Tag;
+use App\Models\Produk;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -26,7 +27,12 @@ class HomeController extends Controller
     public function index()
     {
       $tags = Tag::all();
+      $produks = Produk::inRandomOrder()->paginate(4);
 
-      return view('home', compact('tags'));
+      return view('home',['tags'=> $tags, 'produks'=>$produks]);
+    }
+
+    public function login1st(){
+      return redirect('/login');
     }
 }

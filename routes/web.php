@@ -31,6 +31,7 @@ Route::group(['middleware'=> 'auth'], function(){
   // Route::resource('profile','UserController', ['except'=>['index','show']]);
 });
 
+Route::get('/login1st','HomeController@login1st');
 // Route::resource('profile','UserController', ['only'=>['index','show']]);
 
 Route::get('/', 'HomeController@index')->name('home');
