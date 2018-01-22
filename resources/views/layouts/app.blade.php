@@ -75,9 +75,10 @@
                       <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                       <span class="tombol-cart">&nbsp;Keranjang&nbsp;
                       </span><span class="badge badge-danger cart-num">
-                      @if(Auth::user()->cart->first() == null)
+                      @if(!Auth::user()->cart)
                         0
-                      @elseif (Auth::user()->cart->where('status', 1)->first())
+                      @elseif (Auth::user()->cart->where(['user_id'=>Auth::user()->id,'status'=> 1])->first())
+                      {{-- @elseif (Auth::user()->cart->where('status', 1)->first()) --}}
                         {{Auth::user()->cart->cartItems->count()}}
                       @else
                         0
