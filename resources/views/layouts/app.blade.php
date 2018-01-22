@@ -58,7 +58,7 @@
                       <span class="nomor">
                         @if (!Auth::user()->pesans->first())
                           0
-                        @elseif (Auth::user()->pesans->first()->pivot->where('status',2)->first())
+                        @elseif (Auth::user()->pesans->first()->pivot->where('status', 2)->first())
                           {{Auth::user()->pesans->count()}}
                         @else
                           0

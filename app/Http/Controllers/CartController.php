@@ -107,7 +107,7 @@ class CartController extends Controller
     return view('produks.keranjang',['items'=>$items,'subtotal'=>$subtotal,'totalbayar'=>$totalbayar]);
     }
 
-    public function removeItem($id){
+  public function removeItem($id){
 
         CartItem::destroy($id);
         return redirect('/');

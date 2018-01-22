@@ -55,7 +55,7 @@
                 </tr>
                 <tr>
                   <td colspan="1" class="text-left"><span>Kirim ke Alamat</span></td>
-                  <td colspan="1" >
+                  <td style="width:10%;">
                   @if (empty(Auth::user()->profile->alamat_user))
                     <span style="color:red;">
                     Alamat belum diisi pada profile anda <a href="/profile/{{Auth::user()->profile->id}}/edit" class="btn btn-success" role="button" aria-pressed="true"> Klik disini untuk Mengisi Alamat</a>
@@ -66,6 +66,8 @@
                     </span>
                   @endif
                   </td>
+                  <td></td>
+                  <td></td>
                 </tr>
                 <tr>
                   <td colspan="1" class="text-left"><span>No. Telpon/HP anda</span></td>

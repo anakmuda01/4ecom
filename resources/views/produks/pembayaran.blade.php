@@ -87,14 +87,14 @@
                                 <p>Rp. {{$item->produk->harga_produk}}</p>
                               </td>
                               <td>{{$item->jumlah_beli}}</td>
-                              <td>Rp. {{$item->harga_total}}</td>
+                              <td>Rp. {{number_format($item->harga_total,2,',','.')}}</td>
                             </tr>
                           @endforeach
                           <tr>
                             <td></td>
                             <td></td>
                             <td>Total</td>
-                            <td>Rp. {{number_format($hartot,2,'.',',')}}</td>
+                            <td>Rp. {{number_format($hartot,2,',','.')}}</td>
                           </tr>
                         </tbody>
                       </table>

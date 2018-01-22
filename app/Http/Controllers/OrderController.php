@@ -28,8 +28,14 @@ class OrderController extends Controller
 
         $user = User::find($usr);
         $psn = $user->pesans->first();
+
         if(!$psn){
           $user->pesans()->attach(2);
+        }
+
+        $x = $psn->pivot->where('user_id',$usr)->first();
+        if($x){
+          $user->pesans()->updateExistingPivot($x->pesan_id,['status'=>2]);
         }
 
         $cart = Cart::where('user_id',Auth::user()->id)->first();
@@ -107,6 +113,14 @@ class OrderController extends Controller
      */
     public function destroy($id)
     {
+      $usr = Auth::user()->id;
+      $user = User::find($usr);
+      $psn = $user->pesans->first();
+      $x = $psn->pivot->where('user_id',$usr)->first();
+      if($x){
+        $user->pesans()->updateExistingPivot($x->pesan_id,['status'=>1]);
+      }
+
       $cart = Cart::where('user_id', $id)->first();
       if($cart)
         $cart->delete();

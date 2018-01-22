@@ -72,6 +72,7 @@ class RegisterController extends Controller
         ]);
         $user->profile()->save(new Profile);
         $user->cart()->save(new Cart);
+        $user->pesans()->attach(2);
         return $user;
     }
 }
