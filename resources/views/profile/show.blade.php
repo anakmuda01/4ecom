@@ -4,6 +4,11 @@
   <div class="container">
     <div class="row justify-content-md-center">
       <div class="col-md-5">
+        @if (session()->has('oke'))
+          <div class="alert alert-success">
+            {{session()->get('oke')}}
+          </div>
+        @endif
         @if (Session::has('msg'))
           <div class="alert alert-success">{{ Session::get('msg') }}</div>
         @endif
@@ -42,6 +47,12 @@
                     {{$profile->alamat_user}}
                   </span></td>
                 </tr>
+                <td><span>Ubah Password</span></td>
+                <td><span>:</span></td>
+                <td><span>
+                  <a href="/gantipassword" class="btn btn-secondary">Klik Disini</a>
+                </span></td>
+              </tr>
               </tbody>
             </table>
           </div>
@@ -52,10 +63,4 @@
       </div>
     </div>
   </div>
-  {{-- <ul>
-    <li>{{$user->email}}</li>
-    <li>{{$user->profile->nama_user}}</li>
-    <li>{{$user->profile->no_telpon}}</li>
-    <li>{{$user->profile->alamat_user}}</li>
-  </ul> --}}
 @endsection

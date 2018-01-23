@@ -144,11 +144,98 @@
       @yield('content')
     </div>
     <br>
-    <footer class="footer">
-      <div class="container">
-        <p class="text-center text-muted">&copy; 2018 Kelompok 4 E-Commerce Kelas 5C Reguler Pagi Banjarbaru</p>
+
+    {{-- <footer class="footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <p class="text-center text-muted">&copy; 2018 Kelompok 4 E-Commerce Kelas 5C Reguler Pagi Banjarbaru</p>
+          </div>
+        </div>
       </div>
-    </footer>
+    </footer> --}}
+  <footer class="mainfooter" role="contentinfo">
+    <div class="footer-top p-y-2">
+      <div class="container-fluid">
+        <div class="row">
+
+          <div class="col-md-12">
+            <div class="footer-title text-xs-center">
+              <h4 class="p-b-1">Contact Us</h4>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="footer-middle">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-6">
+          <!--Column1-->
+          <div class="footer-pad">
+            <h4>About</h4>
+            <address>
+                  <ul class="list-unstyled">
+                    <li>
+                      Cathering Online Shop<br>
+                      Projek UAS<br>
+                      E-COMMERCE<br>
+                    </li>
+                  </ul>
+                </address>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <!--Column1-->
+          <div class="footer-pad">
+            <h4>Alamat</h4>
+            <address>
+  								<ul class="list-unstyled">
+  									<li>
+                      UNISKA BANJARBARU<br>
+  										Kelas 5C Reg Pagi<br>
+  										Kelompok 4<br>
+  										E-commerce<br>
+  									</li>
+  									<li>
+  										Phone: 085247711065
+  									</li>
+  								</ul>
+  							</address>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <!--Column1-->
+          <div class="footer-pad">
+            <h4>Website Information</h4>
+            <ul class="list-unstyled">
+              <li><a href="#">Website Tutorial</a></li>
+              <li><a href="#">Accessibility</a></li>
+              <li><a href="#">Disclaimer</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Webmaster</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <!--Footer Bottom-->
+            <p class="text-center">&copy; Copyright 2018 Kelompok 4 </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 </div>
 
 <!-- Scripts -->

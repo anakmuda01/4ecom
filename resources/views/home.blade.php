@@ -2,10 +2,10 @@
 
 @section('content')
 <div class="jumbotron jumbotron-fluid banner">
-  <div class="container">
+  <div class="container kk">
     <h1 class="display-4 text-center">Cathering Online Shop</h1>
     <h2 class="display-4 text-center">Kelompok 4 5C Reguler Pagi</h2>
-    <div class="row">
+    <div class="row gg">
       <div class="col-md-6">
         <p class="lead text-center">Fathurrahman Sholihin (15.63.0674)</p>
         <p class="lead text-center">Diyah Rizky Aulia (15.63.0799)</p>

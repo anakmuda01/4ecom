@@ -22,6 +22,8 @@ Route::group(['middleware'=> 'admin'], function(){
 });
 
 Route::group(['middleware'=> 'auth'], function(){
+  Route::get('/gantipassword', 'UserController@gantipass');
+  Route::post('/user/credentials','UserController@postCredentials');
   Route::resource('profile','UserController');
   Route::post('/cart/{produkid}', 'CartController@addItem');
   Route::get('/keranjang', 'CartController@showCart');

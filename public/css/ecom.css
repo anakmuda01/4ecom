@@ -1,4 +1,4 @@
-@media (min-width: 576px) {
+@media screen and (min-width: 576px) {
   .dropdown:hover>.dropdown-menu {
     display: block;
   }
@@ -33,7 +33,7 @@
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media screen and (max-width: 500px) {
   .kat{
     display: none;
   }
@@ -59,9 +59,34 @@
     height: auto;
   }
   .display-4{
-    font-size: 0.3em !important;
+    font-size: 1em;
+    color: red;
+  }
+  .nama-nama{
+    padding:0;
+    margin:0;
+  }
+  .isi-banner{
+    background-color: white;
+  }
+  .lead{
+     color:red;
+     font-size: 0.5em;
+  }
+  .kk{
+    background-color: wheat;
+  }
+  .gg p{
+    background-color: white;
+    padding: 0px;
+    margin: 0;
   }
 }
+.banner{
+  background-image: url("/img/banner.jpg");
+  color:white;
+}
+
 .banner h1{
   font-weight: bold;
   color: red;
@@ -135,12 +160,12 @@
   top:0;
   max-height: 40em;
 }
-.footer {
+/*.footer {
   width: 100%;
   height: 60px; /* Set the fixed height of the footer here */
-  line-height: 60px; /* Vertically center the text there */
-  background-color: #f5f5f5;
-}
+  /*line-height: 60px; /* Vertically center the text there */
+  /*background-color: #f5f5f5;*/
+}*/
 .login-warp{
   min-height: 37.5em;
 }
@@ -372,4 +397,28 @@ figure {
 .detail-home-produk{
   min-height: 7em;
   max-height: 7em;
+}
+
+footer{
+  margin-top: 18em;
+  color: white;
+}
+footer a{
+  color: #bfffff;
+}
+footer a:hover{
+  color: white;
+}
+
+.footer-bottom{
+  background: #0e571c;
+  padding: 1em;
+}
+.footer-top{
+  background: #0e571c;
+}
+.footer-middle{
+   background: #04380e;
+  padding-top: 1em;
+  color: white;
 }
