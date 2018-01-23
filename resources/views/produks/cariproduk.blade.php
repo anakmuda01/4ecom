@@ -30,17 +30,11 @@
                       Urut Berdasarkan
                     </button>
                     <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">Terbaru</a>
-                      <a class="dropdown-item" href="/termurah">Termurah</a>
-                      <a class="dropdown-item" href="#">Termahal</a>
+                      <a class="dropdown-item" href="/produk/terbaru">Terbaru</a>
+                      <a class="dropdown-item" href="/produk/termurah">Termurah</a>
+                      <a class="dropdown-item" href="/produk/termahal">Termahal</a>
                     </div>
                   </div>
-                </div>
-                <div class="col-md-12">
-                  <form method="GET" action="/produk" class="form-inline d-flex mx-auto caribox">
-                    <input name="cari" class="form-control mr-sm-2" type="text" placeholder="Cari produk ..." aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                  </form>
                 </div>
               </div>
             </div>

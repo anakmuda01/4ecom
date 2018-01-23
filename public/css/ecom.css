@@ -23,6 +23,14 @@
     width: 15em;
     height: 13em;
   }
+  .katlog{
+    margin-top: -10em;
+  }
+  .banner{
+    background-image: url("/img/banner.jpg");
+    color: white;
+    height: 30em !important;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -50,8 +58,14 @@
   .ini figure img{
     height: auto;
   }
+  .display-4{
+    font-size: 0.3em !important;
+  }
 }
-
+.banner h1{
+  font-weight: bold;
+  color: red;
+}
 .belum-ada{
   padding-top:10em;
   min-height: 35em;
@@ -135,7 +149,6 @@
 }
 .banner{
   height: 15em;
-  background-color: green;
 }
 .carol{
   max-height: 20em;

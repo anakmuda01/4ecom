@@ -35,7 +35,9 @@ Route::get('/login1st','HomeController@login1st');
 // Route::resource('profile','UserController', ['only'=>['index','show']]);
 
 Route::get('/', 'HomeController@index')->name('home');
-Route::get('/termurah', 'ProdukController@indexTermurah')->name('termurah');
+Route::get('/produk/termurah', 'ProdukController@termurah');
+Route::get('/produk/termahal', 'ProdukController@termahal');
+Route::get('/produk/terbaru', 'ProdukController@terbaru');
 Route::get('/produk/kategori/{slug_tag}', 'ProdukController@filter')->name('filter');
 // Route::get('/c', function () {
 //     return view('produks.cariproduk');

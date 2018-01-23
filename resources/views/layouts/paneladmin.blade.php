@@ -36,12 +36,10 @@
                     Kategori
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Nasi Bungkus</a>
-                    <a class="dropdown-item" href="#">Nasi Kotak</a>
+                    <a class="dropdown-item" href="/produk/kategori/nasi_bungkus">Nasi Bungkus</a>
+                    <a class="dropdown-item" href="/produk/kategori/nasi_kotak">Nasi Kotak</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Kue</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Snack</a>
+                    <a class="dropdown-item" href="/produk/kategori/snack">Snack</a>
                   </div>
                 </li>
               </ul>
