@@ -27,8 +27,19 @@ class NotifController extends Controller
     }
 
     $user = User::find($id);
-    $user->pesans()->sync($request->pesan_admin);
 
-    return redirect()->back()->with('msg','Pesan berhasil dikirim');
+    $psn = $user->pesans->first();
+    $x = $psn->pivot->where('user_id', $psn->pivot->user_id)->first();
+    if($x){
+      $user->pesans()->detach($x->pesan_id);
+      // $user->pesans()->updateExistingPivot($x->pesan_id,['status'=>2]);
+    }
+
+    $user->pesans()->attach($request->pesan_admin,['status'=>2]);
+
+    session()->flash('wow','Pesan ke Pelanggan Terkirim.');
+
+    $c = Cart::where('user_id', $id)->first();
+    return redirect('/admin/order/'.$c->id);
   }
 }

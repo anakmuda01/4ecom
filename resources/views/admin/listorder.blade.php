@@ -61,7 +61,7 @@
                      {{$up->tipe_pesan}}
                    @endforeach
                  </td>
-                 <td><a href="/admin/order/{{$order->id}}" target="_blank" class="btn btn-primary btn-block" role="button" aria-pressed="true">Lihat</a></td>
+                 <td><a href="/admin/order/{{$order->id}}" class="btn btn-primary btn-block" role="button" aria-pressed="true">Lihat</a></td>
                  {{-- <td>
                    <form method="POST" action="/admin/order/{{$order->id}}">
                      {{ csrf_field() }}

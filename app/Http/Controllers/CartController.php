@@ -58,7 +58,8 @@ class CartController extends Controller
 
     if(!empty($c)){
         $tot = $c->jumlah_beli;
-        if($tot>=80){
+        $max = $tot+$request->jumlah_beli;
+        if($max > 100){
           return redirect('/produk/'.$produk->slug_produk)->with('max','Pembelian melebihi Maximum beli silahkan cek Keranjang Anda');
         } else {
           $tot = $c->jumlah_beli + $request->jumlah_beli ;

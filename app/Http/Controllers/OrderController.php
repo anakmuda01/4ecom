@@ -49,6 +49,13 @@ class OrderController extends Controller
     }
 
     public function pembayaran(){
+      $a = Auth::user()->id;
+      $b = User::find($a);
+      $psn = $b->pesans->first();
+      if(!$psn){
+        $b->pesans()->attach(2);
+      }
+
       $user = Auth::user()->id;
       $pesans = Pesan::all();
       $temu = ['user_id'=>$user, 'status'=> 2];
@@ -118,7 +125,7 @@ class OrderController extends Controller
       $psn = $user->pesans->first();
       $x = $psn->pivot->where('user_id',$usr)->first();
       if($x){
-        $user->pesans()->updateExistingPivot($x->pesan_id,['status'=>1]);
+        $user->pesans()->detach($x->pesan_id);
       }
 
       $cart = Cart::where('user_id', $id)->first();

@@ -92,6 +92,11 @@
                      @if(session('pesan_error'))
                        <p style="color:red;">{{session('pesan_error')}}</p>
                      @endif
+                     @if (session()->has('wow'))
+                       <div class="alert alert-success">
+                         {{session()->get('wow')}}
+                       </div>
+                     @endif
                       <span>Pesan untuk Pelanggan :</span>
                       @foreach ($user->pesans as $oldpesan)
                         <select class="form-control" name="pesan_admin[]" id="pesan_admin">
