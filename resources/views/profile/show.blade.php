@@ -4,6 +4,11 @@
   <div class="container">
     <div class="row justify-content-md-center">
       <div class="col-md-5">
+        @if (session('mantap'))
+            <div class="alert alert-success">
+                {{ session('mantap') }}
+            </div>
+        @endif
         @if (session()->has('oke'))
           <div class="alert alert-success">
             {{session()->get('oke')}}

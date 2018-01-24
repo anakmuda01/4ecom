@@ -24,28 +24,32 @@ class ProdukController extends Controller
                   ->orderBy('created_at','desc')
                   ->paginate(9);
 
-            $count = $produks->count();
+            $c = Produk::where('nama_produk', 'like', '%'.$cari_p.'%')->get();
+            $count = $c->count();
             return view('produks.cariproduk',['produks'=>$produks])->with('count', $count);
 
         } else {
           $produks = Produk::where('status', 1)->with('tags')
                   ->orderBy('created_at','desc')
                   ->paginate(9);
-          $count = $produks->count();
+
+          $c = Produk::where('status', 1)->get();
+          $count = $c->count();
           return view('produks.cariproduk',['produks'=>$produks])->with('count', $count);
         }
         // Produk::inRandomOrder()->with('tags')
     }
 
-    public function indexKategori(Request $request)
-    {
-      $produks = Produk::where('nama_produk', 'like', '%'.$cari_p.'%')
-            ->with('tags')
-            ->orderBy('created_at','desc')
-            ->paginate(9);
-
-      $count = $produks->count();
-    }
+    // public function indexKategori(Request $request)
+    // {
+    //   $produks = Produk::where('nama_produk', 'like', '%'.$cari_p.'%')
+    //         ->with('tags')
+    //         ->orderBy('created_at','desc')
+    //         ->paginate(9);
+    //   $produks = Produk::where('nama_produk', 'like', '%'.$cari_p.'%')->get();
+    //
+    //   $count = $produks->count();
+    // }
 
     public function filter($tag){
       $tags = Tag::all();
@@ -55,7 +59,10 @@ class ProdukController extends Controller
                                         })->orderBy('created_at','desc')
                                         ->paginate(9);
 
-      $count = $produks->count();
+      $c = Produk::with('tags')->whereHas('tags', function($query) use($tag) {
+                                        $query->where('slug_tag', $tag);
+                                      })->get();
+      $count = $c->count();
       return view('produks.cariproduk',['produks'=>$produks])->with('count', $count);
 
     }
@@ -165,14 +172,17 @@ class ProdukController extends Controller
                 ->orderBy('harga_produk','asc')
                 ->paginate(9);
 
-          $count = $produks->count();
+          $c = Produk::where('nama_produk', 'like', '%'.$cari_p.'%')->get();
+          $count = $c->count();
           return view('produks.cariproduk',['produks'=>$produks])->with('count', $count);
 
       } else {
         $produks = Produk::where('status', 1)->with('tags')
                 ->orderBy('harga_produk','asc')
                 ->paginate(9);
-        $count = $produks->count();
+
+        $c = Produk::where('status', 1)->get();
+        $count = $c->count();
         return view('produks.cariproduk',['produks'=>$produks])->with('count', $count);
       }
       // Produk::inRandomOrder()->with('tags')
@@ -183,17 +193,20 @@ class ProdukController extends Controller
       if(!empty($cari_p)){
           $produks = Produk::where('nama_produk', 'like', '%'.$cari_p.'%')
                 ->with('tags')
-                ->orderBy('harga_produk','asc')
+                ->orderBy('harga_produk','desc')
                 ->paginate(9);
 
-          $count = $produks->count();
+          $c = Produk::where('nama_produk', 'like', '%'.$cari_p.'%')->get();
+          $count = $c->count();
           return view('produks.cariproduk',['produks'=>$produks])->with('count', $count);
 
       } else {
         $produks = Produk::where('status', 1)->with('tags')
                 ->orderBy('harga_produk','desc')
                 ->paginate(9);
-        $count = $produks->count();
+
+        $c = Produk::where('status', 1)->get();
+        $count = $c->count();
         return view('produks.cariproduk',['produks'=>$produks])->with('count', $count);
       }
     }
@@ -206,14 +219,17 @@ class ProdukController extends Controller
                 ->orderBy('created_at','desc')
                 ->paginate(9);
 
-          $count = $produks->count();
+          $c = Produk::where('nama_produk', 'like', '%'.$cari_p.'%')->get();
+          $count = $c->count();
           return view('produks.cariproduk',['produks'=>$produks])->with('count', $count);
 
       } else {
         $produks = Produk::where('status', 1)->with('tags')
                 ->orderBy('created_at','desc')
                 ->paginate(9);
-        $count = $produks->count();
+
+        $c = Produk::where('status', 1)->get();
+        $count = $c->count();
         return view('produks.cariproduk',['produks'=>$produks])->with('count', $count);
       }
     }

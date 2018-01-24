@@ -6,6 +6,11 @@
         <div class="col-md-8 login-warp">
             <div class="card">
                 <div class="card-header">Login</div>
+                @if (session('msg'))
+                    <div class="alert alert-danger">
+                        {{ session('msg') }}
+                    </div>
+                @endif
                 <div class="card-body">
                     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}

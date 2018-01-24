@@ -24,4 +24,8 @@ class Produk extends Model
     return $this->hasOne('App\Models\CartItem');
   }
 
+  public function comments(){
+    return $this->hasMany('App\Models\ProdukComment');
+  }
+
 }

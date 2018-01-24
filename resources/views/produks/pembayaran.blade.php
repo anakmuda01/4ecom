@@ -16,7 +16,7 @@
                     <tr>
                       <td>Kode Pembayaran</td>
                       <td>:</td>
-                      <td>{{$order->kode_random}}</td>
+                      <td><span style="color:red; font-size:1.3em">{{$order->kode_random}}</span></td>
                     </tr>
                     <tr>
                       <td>Total yang harus dibayar</td>
@@ -45,11 +45,11 @@
                   </tbody>
               </table>
             </div>
-            <span>Ingin Membatalkan ?</span>
+            <span>Ingin Menghapus Order ?</span>
             <form method="POST" action="/pembayaran/{{Auth::user()->id}}">
               {{ csrf_field() }}
               <input type="hidden" name="_method" value="DELETE">
-              <button type="submit" name="submit" class="btn btn-danger">Batalkan Pesanan</button>
+              <button type="submit" name="submit" class="btn btn-danger">Klik Disini</button>
             </form>
           </div>
         </div>
@@ -110,27 +110,29 @@
         </div>
       </div>
       <!-- end Modal -->
-      <div class="col-md-6">
-        <div class="card" style="width: 30rem;">
+      <div class="col-sm-6">
+        <div class="card">
           <div class="card-body">
             <p class="card-text"><span>Silahkan Lakukan Pembayaran dengan cara :</span> </p>
             <p class="card-text"><span>1. Transfer Bank ke Rek : 123456789000011</span> </p>
             <p class="card-text"><span>2. Lakukan Konfirmasi Transfer dengan cara : </span></p>
-            <p>
+            <p class="card-text">
               <span>
                 Mengirimkan Pesan ke nomor WA 085247711065
+              </span><br>
+              <span>
                 dengan format :
               </span>
             </p>
-            <p>
+            <p class="card-text">
               <span>
                  Email Anda # Kode Pembayaran # Bukti Transfer (Berupa Foto)
               </span>
             </p>
-            <p><span>
+            <p class="card-text"><span>
               Contoh Konfirmasi :
             </span></p>
-            <p><span>
+            <p class="card-text"><span>
               sholihin@gmail.com # 12DhP # Foto Transfer
             </span></p>
           </div>

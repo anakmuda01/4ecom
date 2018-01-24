@@ -99,6 +99,47 @@
             </div>
           </div>
 
+          <div class="col-md-12">
+            <form method="POST" action="/produks-comment/{{$produk->id}}">
+              {{ csrf_field() }}
+              <br>
+              <div class="card-header">
+                <span>Tulis Komentar</span>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <div class="form-group">
+                    @if ($errors->has('subject'))
+                      <span style="color:red;">Komentar harus diisi dan minimal 5 karakter</span>
+                    @endif
+                    <textarea class="form-control" id="subject" name="subject" rows="1">{{old('subject')}}</textarea>
+                    <br>
+                    <button type="submit" class="btn btn-secondary">Kirim Komentar</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="col-md-12">
+            <br>
+              <div class="card-header">
+                <span>Komentar Produk</span>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  @foreach ($produk->comments as $comment)
+                    <div class="col-sm-12">
+                      <p><span style="color:red;">{{$comment->user->profile->nama_user}}</span>
+                        <span>berkata :</span>
+                      </p>
+                      <p>{{$comment->subject}}</p>
+                    </div>
+                  @endforeach
+                </div>
+              </div>
+          </div>
+
         </div>
       </div>
     </div>

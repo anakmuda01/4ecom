@@ -30,8 +30,11 @@ Route::group(['middleware'=> 'auth'], function(){
   Route::post('/order/{cartid}', 'OrderController@buatOrder');
   Route::get('/pembayaran', 'OrderController@pembayaran');
   Route::delete('/pembayaran/{id}', 'OrderController@destroy');
+  Route::post('/produks-comment/{id}','ProdukCommentController@store');
   // Route::resource('profile','UserController', ['except'=>['index','show']]);
 });
+
+Route::get('/verify/{token}/{id}', 'Auth\RegisterController@verify');
 
 Route::get('/login1st','HomeController@login1st');
 // Route::resource('profile','UserController', ['only'=>['index','show']]);

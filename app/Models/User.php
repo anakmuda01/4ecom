@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'token', 'status',
     ];
 
     /**
@@ -50,5 +50,9 @@ class User extends Authenticatable
     {
       if($this->role == 2) return true;
       return false;
+    }
+
+    public function commnets(){
+      return $this->hasMany('App\Models\ProdukComment');
     }
 }
