@@ -4,17 +4,10 @@
 <div class="jumbotron jumbotron-fluid banner">
   <div class="container kk">
     <h1 class="display-4 text-center">Cathering Online Shop</h1>
-    <h2 class="display-4 text-center">Kelompok 4 5C Reguler Pagi</h2>
+    <h2 class="display-4 text-center">Projek UAS VISUAL 3</h2>
     <div class="row gg">
-      <div class="col-md-6">
+      <div class="col-md-12">
         <p class="lead text-center">Fathurrahman Sholihin (15.63.0674)</p>
-        <p class="lead text-center">Diyah Rizky Aulia (15.63.0799)</p>
-        <p class="lead text-center">Nugroho Pangestu (15.63.0751)</p>
-      </div>
-      <div class="col-md-6">
-        <p class="lead text-center">Muhammad Metin Akbar (15.63.0750)</p>
-        <p class="lead text-center">Deden Ibu (15.63.0728)</p>
-        <p class="lead text-center">Muhammad Alfi Rezkyanor (15.63.0785)</p>
       </div>
     </div>
   </div>

@@ -9,6 +9,11 @@
                 {{ session('mantap') }}
             </div>
         @endif
+        @if (session('kosong'))
+            <div class="alert alert-danger">
+                {{ session('kosong') }}
+            </div>
+        @endif
         @if (session()->has('oke'))
           <div class="alert alert-success">
             {{session()->get('oke')}}

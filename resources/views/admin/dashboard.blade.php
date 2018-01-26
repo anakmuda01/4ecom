@@ -23,7 +23,9 @@
       <main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3">
                 <h1>Dashboard</h1>
                 <h1>Halo Selamat Datang  !</h1>
-                <h2>Web Ecommerce Kelompok 4</h2>
+                <h2>Web PROJEK UAS VISUAL 3</h2>
+                <h2>Fathurrahman Sholihin</h2>
+                <h2>15.63.0674</h2>
       </main>
 
   </div>

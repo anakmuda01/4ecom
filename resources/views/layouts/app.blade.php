@@ -179,8 +179,8 @@
                   <ul class="list-unstyled">
                     <li>
                       Cathering Online Shop<br>
-                      Projek UAS<br>
-                      E-COMMERCE<br>
+                      Projek UAS Fathurrahman Sholihin<br>
+                      Visual 3<br>
                     </li>
                   </ul>
                 </address>
@@ -196,8 +196,7 @@
   									<li>
                       UNISKA BANJARBARU<br>
   										Kelas 5C Reg Pagi<br>
-  										Kelompok 4<br>
-  										E-commerce<br>
+  										Visual 3<br>
   									</li>
   									<li>
   										Phone: 085247711065
@@ -230,7 +229,7 @@
         <div class="row">
           <div class="col-sm-12">
             <!--Footer Bottom-->
-            <p class="text-center">&copy; Copyright 2018 Kelompok 4 </p>
+            <p class="text-center">&copy; 2018 Fathurrahman Sholihin 15630674</p>
           </div>
         </div>
       </div>

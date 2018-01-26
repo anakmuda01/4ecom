@@ -94,12 +94,16 @@
             </div>
             <div class="card">
               <div class="card-body">
-                <p>{{$produk->deskripsi_produk}}</p>
+                <p>{!!$produk->deskripsi_produk!!}</p>
               </div>
             </div>
           </div>
 
           <div class="col-md-12">
+            @if(Auth::guest())
+              <br>
+              <span>Silahkan Login untuk berkomentar</span>
+            @else
             <form method="POST" action="/produks-comment/{{$produk->id}}">
               {{ csrf_field() }}
               <br>
@@ -119,6 +123,7 @@
                 </div>
               </div>
             </form>
+            @endif
           </div>
 
           <div class="col-md-12">

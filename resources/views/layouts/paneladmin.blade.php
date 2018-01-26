@@ -17,6 +17,7 @@
 
     <!-- Script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="{{asset('js/tinymce/tinymce.min.js')}}"></script>
 </head>
 <body>
 <div id="app">
@@ -120,6 +121,7 @@
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>
 <script src="{{ asset('js/sholihin.js') }}"></script>
+<script src="{{asset('js/init.js')}}"></script>
 {{-- <script src="{{asset('/vendor/laravel-filemanager/js/lfm.js')}}"></script> --}}
 
 </body>

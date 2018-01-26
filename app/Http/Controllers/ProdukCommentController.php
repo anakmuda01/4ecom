@@ -16,6 +16,13 @@ class ProdukCommentController extends Controller
 
     public function store(Request $request , $id)
     {
+      $produks = Produk::FindOrFail($id);
+      $usr = Auth::user()->id;
+      $user = User::find($usr);
+      if($user->profile->nama_user == null){
+        session()->flash('kosong','Silahkan lengkapi profile anda sebeleum berkomentar.');
+        return redirect('/profile');
+      }
       $this->validate($request, [
         'subject' => 'required|min:5',
       ]);
@@ -25,7 +32,7 @@ class ProdukCommentController extends Controller
           'produk_id' => $id,
           'user_id' => Auth::user()->id
       ]);
-      $produks = Produk::FindOrFail($id);
+
       return redirect('/produk/'.$produks->slug_produk);
     }
 }
